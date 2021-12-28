@@ -1,7 +1,10 @@
 
 function App() {
   return (
-    <h1>Meu app react</h1>
+    <div>
+      <h1>Meu app react</h1>
+      <p>Colocando conteúdo na página</p>
+    </div>
   );
 }
 
