@@ -1,10 +1,13 @@
+import React from 'react'
+import FormularioCadastro from './components/formularioCadastro';
+import ListaDeNotas from './components/listaDeNotas';
 
 function App() {
   return (
-    <div>
-      <h1>Meu app react</h1>
-      <p>Colocando conteúdo na página</p>
-    </div>
+    <section>
+      <FormularioCadastro />
+      <ListaDeNotas />
+    </section>
   );
 }
 
