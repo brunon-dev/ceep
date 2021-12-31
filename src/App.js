@@ -1,7 +1,7 @@
 import React from 'react'
-import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro';
-import ListaDeNotas from './components/ListaDeNotas/ListaDeNotas';
-import "./App.css"
+import FormularioCadastro from './components/FormularioCadastro';
+import ListaDeNotas from './components/ListaDeNotas';
+import "./assets/App.css"
 
 function App() {
   return (
