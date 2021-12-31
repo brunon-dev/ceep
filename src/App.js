@@ -1,10 +1,11 @@
 import React from 'react'
-import FormularioCadastro from './components/formularioCadastro';
-import ListaDeNotas from './components/listaDeNotas';
+import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro';
+import ListaDeNotas from './components/ListaDeNotas/ListaDeNotas';
+import "./App.css"
 
 function App() {
   return (
-    <section>
+    <section className='conteudo'>
       <FormularioCadastro />
       <ListaDeNotas />
     </section>
