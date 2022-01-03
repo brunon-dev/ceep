@@ -4,15 +4,31 @@ import ListaDeNotas from './components/ListaDeNotas';
 import "./assets/App.css"
 
 class App extends Component {
+
+  constructor(){
+    super();
+    
+    this.state = {
+      notas: []
+    };
+  }
+
   criarNota(titulo, nota){
-    console.log('Uma nova nota foi criada 2: ' + titulo + ' - ' + nota);
+    const novaNota = {titulo, nota};
+    // uso de spread operator para iterar para o array, adicionando em seguida uma nova nota
+    const novoArrayNotas = [...this.state.notas, novaNota];
+    const novoEstado = {
+      notas: novoArrayNotas
+    }
+    
+    this.setState(novoEstado);
   }
 
   render(){
     return (
       <section className='conteudo'>
-        <FormularioCadastro criarNota={this.criarNota} />
-        <ListaDeNotas />
+        <FormularioCadastro criarNota={this.criarNota.bind(this)} />
+        <ListaDeNotas notas={this.state.notas} />
       </section>
     );
   }
