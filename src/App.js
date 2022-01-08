@@ -14,8 +14,8 @@ class App extends Component {
     };
   }
 
-  criarNota(titulo, nota) {
-    const novaNota = { titulo, nota };
+  criarNota(titulo, nota, categoria) {
+    const novaNota = { titulo, nota, categoria };
     // uso de spread operator para iterar para o array, adicionando em seguida uma nova nota
     const novoArrayNotas = [...this.state.notas, novaNota];
     const novoEstado = {
