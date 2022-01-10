@@ -3,18 +3,22 @@ import CardNota from "../CardNota";
 import "./estilo.css";
 
 class ListaDeNotas extends Component {
-
   constructor() {
     super();
-    this.state = {notas: []};
+    this.state = { notas: [] };
+    this.novasNotas = this._novasNotas.bind(this);
   }
 
   componentDidMount() {
-    this.props.notas.inscrever(this._novasNotas.bind(this));
+    this.props.notas.inscrever(this.novasNotas);
+  }
+
+  componentWillUnmount() {
+    this.props.notas.desinscrever(this.novasNotas);
   }
 
   _novasNotas(notas) {
-    this.setState({...this.state, notas});
+    this.setState({ ...this.state, notas });
   }
 
   render() {
