@@ -18,18 +18,12 @@ class App extends Component {
     return (
       <section className="conteudo">
         <FormularioCadastro
-          criarNota={this.notas.criarNota}
-          categorias={this.categorias.categorias}
+          criarNota={this.notas.adicionarNota.bind(this.notas)}
+          categorias={this.categorias}
         />
         <main className="conteudo-principal">
-          <ListaDeCategorias
-            adicionarCategoria={this.categorias.adicionarCategoria}
-            categorias={this.categorias.categorias}
-          />
-          <ListaDeNotas
-            apagarNota={this.notas.apagarNota}
-            notas={this.notas.notas}
-          />
+          <ListaDeCategorias categorias={this.categorias} />
+          <ListaDeNotas apagarNota={this.notas.apagarNota.bind(this.notas)} notas={this.notas} />
         </main>
       </section>
     );
